@@ -80,7 +80,9 @@ To demonstrate **Human-Computer Interaction (HCI)** capabilities, the project in
 ### 🎥 Demo
 Check out the system in action:
 
-![Demo](05%20media/demo.mp4)
+https://github.com/user-attachments/assets/e1edc643-3689-446e-8a59-12ec650ce28c
+
+
 
 ## 🛠️ Getting Started
 
