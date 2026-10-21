@@ -19,18 +19,17 @@ This project provides an end-to-end solution for capturing and analyzing EMG sig
 ## 📂 Directory Structure
 
 ```
-e:\Projects\EMG-Capture-and-Visualization\
+EMG-Capture-and-Visualization/
 ├── 01 Simulations/       # Circuit simulations and Python signal processing demos
 │   ├── LT Spice/         # LTSpice models (INA333, etc.) and behavioral simulations
 │   └── Dataset/          # Test datasets
 ├── 02 Hardware/          # Hardware design files
-│   └── PCB/              # Altium Designer Schematics (.SchDoc) and PCB Layouts (.PcbDoc)
+│   └── PCB/              # Altium schematics (.SchDoc), PCB layout (.PcbDoc) and 3D models (.step)
 ├── 03 firmware/          # Microcontroller code and PC software
 │   ├── adafruitM0/       # Arduino sketch for the Adafruit M0 Feather
 │   └── Python/           # Real-time visualization application (PyQt6)
 │       ├── app.py        # Main GUI Application
-│       └── EMG_game.py   # Flappy Bird Game
-├── 04 3D Design/         # 3D models for enclosures and mechanical parts
+│       └── emggame.py   # Flappy Bird Game
 └── 05 media/             # Project images and demos
 ```
 
@@ -68,7 +67,7 @@ The system includes a powerful Python-based GUI (`app.py`) for real-time analysi
 *Real-time EMG data visualization in the GUI*
 
 ### 🎮 Flappy Bird Game (HCI Demo)
-To demonstrate **Human-Computer Interaction (HCI)** capabilities, the project includes a game controlled by muscle activity (`EMG_game.py`).
+To demonstrate **Human-Computer Interaction (HCI)** capabilities, the project includes a game controlled by muscle activity (`emggame.py`).
 
 - **Control Scheme**: Muscle contractions (EMG signal crossing a threshold) trigger the bird to jump.
 - **Visual Feedback**: Real-time EMG signal envelope is displayed at the bottom of the game window.
@@ -93,7 +92,7 @@ https://github.com/user-attachments/assets/e1edc643-3689-446e-8a59-12ec650ce28c
 ### 1. Firmware Setup
 1. Open `03 firmware/adafruitM0/adafruitM0.ino` in Arduino IDE.
 2. Install the **WiFi101** library.
-3. Update the `ssid`, `pass`, and `remoteIp` (your PC's IP address) in the code.
+3. Copy `arduino_secrets.example.h` to `arduino_secrets.h` (git-ignored) and enter your Wi-Fi SSID and password; set `remoteIp` in the sketch to your PC's local IP address.
 4. Upload to the Adafruit M0 board.
 
 ### 2. Python Environment
@@ -117,7 +116,7 @@ python app.py
 To try the game demo:
 ```bash
 cd "03 firmware/Python"
-python EMG_game.py
+python emggame.py
 ```
 - Flex your muscle to make the bird jump!
 - Adjust gain with Up/Down arrow keys if needed.
@@ -129,3 +128,6 @@ The `01 Simulations` folder contains:
 
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Credits
+Team project, Department of Electronic and Telecommunication Engineering, University of Moratuwa. Original repository: [Sajitha-Madugalle/EMG-Capture-and-Visualization](https://github.com/Sajitha-Madugalle/EMG-Capture-and-Visualization).

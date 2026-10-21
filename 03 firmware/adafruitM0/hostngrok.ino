@@ -1,12 +1,13 @@
 #include <SPI.h>
 #include <WiFi101.h>
+#include "arduino_secrets.h"  // copy arduino_secrets.example.h to arduino_secrets.h and fill in
 
-char ssid[] = "testwifi";
-char pass[] = "12345678";
+char ssid[] = SECRET_SSID;        // set in arduino_secrets.h
+char pass[] = SECRET_PASS;        // set in arduino_secrets.h
 int status = WL_IDLE_STATUS;
 
 // --- CONFIGURATION ---
-char server[] = "change-me.ngrok.io";  // <--- ENTER YOUR NGROK DOMAIN HERE
+char server[] = SECRET_SERVER;    // ngrok domain, set in arduino_secrets.h
 char path[]   = "/api/data";           // <--- ENTER YOUR API PATH HERE
 int port      = 80;
 
