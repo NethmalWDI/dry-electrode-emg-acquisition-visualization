@@ -73,3 +73,6 @@ Thumbs.db
 02 Hardware/PCB/Project Logs for EMG/
 02 Hardware/PCB/Project Outputs for EMG/
 02 Hardware/PCB/__Previews/
+
+# Firmware secrets (Wi-Fi credentials)
+arduino_secrets.h

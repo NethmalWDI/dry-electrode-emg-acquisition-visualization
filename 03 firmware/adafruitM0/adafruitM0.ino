@@ -1,13 +1,14 @@
 #include <SPI.h>
 #include <WiFi101.h>
+#include "arduino_secrets.h"  // copy arduino_secrets.example.h to arduino_secrets.h and fill in
 #include <WiFiUdp.h>
 
-char ssid[] = "testwifi";
-char pass[] = "12345678";
+char ssid[] = SECRET_SSID;        // set in arduino_secrets.h
+char pass[] = SECRET_PASS;        // set in arduino_secrets.h
 int status = WL_IDLE_STATUS;
 
 // --- CONFIGURATION ---
-IPAddress remoteIp(10, 174, 193, 249); // <--- target PC IP 10.174.193.249
+IPAddress remoteIp(192, 168, 1, 100); // <--- set to your PC's local IP address
 unsigned int remotePort = 8888;
 WiFiUDP Udp;
 
